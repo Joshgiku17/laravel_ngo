@@ -178,7 +178,7 @@ body{
                 <input type="text" name="phone" id="" placeholder="Phone number" required>
                 </div>
                 <input type="text" name="web" id="" placeholder="Enter Web url"> 
-                    <input type="submit" value="Register" class="sub" name="submit">
+                    <input type="submit" value="Register" class="sub" name="submit" style="height:7vh">
                 <div class="alternatives"> 
                     <a href="/login">
                         Already Registered ? Login 
@@ -188,7 +188,7 @@ body{
         </div>
     </div>
     <div class="right">
-        <img src="../img/KID.webp" alt="">
+        <!-- <img src="../img/KID.webp" alt=""> -->
         <div class="right_text">
           <p class="first_p">Welcome to PORTAL 
             </p>

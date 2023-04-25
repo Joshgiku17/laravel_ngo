@@ -1,5 +1,5 @@
 @extends('layout')
-@section('heading','Register employee')
+@section('heading','Register a beneficiary')
 @section ('title','insert new record')
 <style>
     .center{
@@ -68,30 +68,34 @@
     position: relative;
 }
 .info{
-        width:15%;
+        width:20%;
         padding:5px;
         position:absolute;
         left:30vw;
         top:20px;
         background-color:var(--fourth);
         color:white;
+        /* font-size:18px; */
         font-family: 'Signika Negative', sans-serif;
+    }
+    .amakuru .smalls label{
+        margin-top:10px;
+        width:1vw;
+        font-family: 'Manrope', sans-serif;
     }
 </style>
 
 @section('form')
-<form action="/reg_Emp" method="POST" class="amakuru">
+<form action="/register_bene" method="POST" class="amakuru">
             @csrf
-                <input type="text" name="name" id="" placeholder="Enter employee names" required>
-                <input type="email" name="email" id="" placeholder="Enter email" required>
-                <input type="text" name="username" id="" placeholder="Enter Username" required>
-                <input type="text" name="phone" id="" placeholder="Tel: +250" required>
+                <input type="text" name="names" id="" placeholder="Enter beneficiary names" required>
+                <input type="text" name="address" id="" placeholder="Enter District" required>
                 <div class="smalls">
-
-                <input type="date" name="dob" id="" placeholder="Date of birth" required>
-                <input type="role" name="roleid" id="" placeholder="Employee role" required>
+                    <input type="text" name="dob" id=""Placeholder="Enter date of birth" required>
+                    <input type="text" name="phone_num" id="" placeholder="Tel: +250" required>
                 </div>
+                <input type="text" name="work" id="" placeholder="Enter occupation" required>
                     <input type="submit" value="Register" class="sub" name="submit">
-               <button class="view"><a href="employees">View Records</a></button>
+               <button class="view"><a href="bene">View Records</a></button>
 </form>
 @endsection

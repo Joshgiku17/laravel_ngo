@@ -1,8 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-Route::get('/','App\Http\Controllers\Ucontroller@index');
-
+use App\Http\Controllers;
+Route::view('/','index');
+Route::view('bene','bene');
 Route::get('/login',function(){
     return view('login');
 });
@@ -18,13 +19,18 @@ Route::get('/donors',function(){
 Route::get('/employees',function(){
     return view('employees');
 });
-Route::get('/beneficiaries',function(){
-    return view('beneficiaries');
+Route::get('/bene',function(){
+    return view('bene');
 });
 Route::post('reg_Emp','App\Http\Controllers\EmployeeController@store');
 Route::view('emp_create','emp_create');
+Route::view('bene_add','bene_add');
+Route::view('don_add','don_add');
+Route::post('reg_donor','App\Http\controllers\DonorsController@store');
+ROute::post('register_bene','App\Http\Controllers\BeneController@store');
 Route::post('/createaccount', 'App\Http\Controllers\Ucontroller@store');
 Route::post('/validate','App\Http\Controllers\Ucontroller@login');
 // Route::post('/employee','App\Http\Controllers\EmployeeController@index');
 Route::get('employees','App\Http\Controllers\EmployeeController@index');
+Route::get('bene','App\Http\Controllers\BeneController@index');
 ?>

@@ -163,7 +163,7 @@ body{
 <div class="left">
     <div class="logo">
         <a href="#">
-            <img src="Group 3.svg" alt="">
+            <!-- <img src="Group 3.svg" alt=""> -->
         </a>
     </div>
     <div class="form-wrap">
@@ -174,7 +174,7 @@ body{
                 @csrf
                 <input type="username" name="username" id="" placeholder="Enter username">
                 <input type="password" name="pwd" id="" placeholder="Enter password">
-                <input type="submit" value="login" class="sub" name="submit">
+                <input type="submit" value="login" class="sub" name="submit" style="height:7vh">
                 <div class="alternatives">
                     <div class="alert" style="color:red;">
                     </div>
@@ -186,7 +186,7 @@ body{
         </div>
     </div>
     <div class="right">
-        <img src="../img/konvetion.webp" alt="">
+        <!-- <img src="../img/konvetion.webp" alt=""> -->
         <div class="right_text">
             <p class="first_p">Welcome to PORTAL
             </p>

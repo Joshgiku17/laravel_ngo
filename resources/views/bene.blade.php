@@ -1,7 +1,7 @@
 @extends('layout')
-@section('title','Employees')
+@section('title','Beneficiary')
 @section('form')
-@section('heading','Employees Records')
+@section('heading','Beneficiaries Records')
 <style>
     .info{
         width:20%;padding:5px;position:absolute;left:30vw;top:20px;background-color:var(--fourth);color:white;font-family: 'Signika Negative', sans-serif;
@@ -9,6 +9,14 @@
     .center{
         /* background:teal; */
         width:71%;
+    }
+    .output{
+        margin-top:10vh;
+    }
+    .output{
+        position:absolute;
+        top:50px;
+        left:40vw;
     }
     .output{
         margin-top:10vh;
@@ -30,9 +38,8 @@
         
         background-color: #f2f2f2;
         
-        
     }
-    .cta{
+   .cta{
         padding:10px;
         border-radius:10px;
         outline:none;
@@ -48,31 +55,29 @@
         font-size:18px;
     }
 </style>
-@if (session('success'))
+@if (session('Success'))
     <script>
-        alert("{{ session('success') }}");
+        alert("{{ session('Success') }}");
     </script>
 @endif
-<button class="cta"><a href="emp_create">insert user</a></button>
+<button class="cta"><a href="bene_add">Register new beneficiary</a></button>
 <table class="output">
     <thead>
         <tr>
             <th>Full names</th>
-            <th>Email</th>
+            <th>Address</th>
             <th>phone</th>
             <th>Date of birth</th>
-            <th>role id</th>
-            <th>Username</th>
+            <th>Occupation</th>
         </tr>
     </thead>
-    @foreach($employee as $row)
+    @foreach($bene as $row)
             <tr>
-                <td>{{$row->name}}</td>
-                <td>{{$row->email}}</td>
-                <td>{{$row->phone}}</td>
+                <td>{{$row->names}}</td>
+                <td>{{$row->address}}</td>
+                <td>{{$row->phone_num}}</td>
                 <td>{{$row->dob}}</td>
-                <td>{{$row->roleid}}</td>
-                <td>{{$row->username}}</td>
+                <td>{{$row->work}}</td>
             </tr>
     @endforeach
 </table>

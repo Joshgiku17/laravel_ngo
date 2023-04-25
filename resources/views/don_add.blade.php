@@ -80,7 +80,7 @@
 </style>
 
 @section('form')
-<form action="/reg_Emp" method="POST" class="amakuru">
+<form action="reg_donor" method="POST" class="amakuru">
             @csrf
                 <input type="text" name="name" id="" placeholder="Enter employee names" required>
                 <input type="email" name="email" id="" placeholder="Enter email" required>

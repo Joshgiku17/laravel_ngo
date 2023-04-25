@@ -113,7 +113,7 @@ body .abs_img{
         <div class="links">
             <ul>
                 <li><a href="/admin"><i class="fa-solid fa-house"></i>Home</a></li>
-                <li><a href="beneficiaries"><i class="fa-solid fa-users-line"></i>Beneficiaries</a></li>
+                <li><a href="/bene"><i class="fa-solid fa-users-line"></i>Beneficiaries</a></li>
                 <li><a href="employees"><i class="fa-solid fa-user-tie"></i>Employees</a></li>
                 <li><a href="donors"><i class="fa-solid fa-handshake"></i>Donors</a></li>
                 <li><a href="/login"><i class="fa-solid fa-arrow-right-from-bracket"></i>Signout</a></li>
